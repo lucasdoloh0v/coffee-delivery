@@ -22,6 +22,7 @@ export interface Order extends OrderInfo {
 
 interface CartContextType {
   cart: Item[]
+  orders: Order[]
   addItem: (item: Item) => void
   itemIncrement: (id: Item['id']) => void
   itemDecrement: (id: Item['id']) => void
@@ -51,7 +52,7 @@ export function CartContextProvider({ children }: CartContextProps) {
     },
   )
 
-  const { cart } = cartState
+  const { cart, orders } = cartState
 
   useEffect(() => {
     if (cartState) {
@@ -85,6 +86,7 @@ export function CartContextProvider({ children }: CartContextProps) {
     <CartContext.Provider
       value={{
         cart,
+        orders,
         addItem,
         itemIncrement,
         itemDecrement,
