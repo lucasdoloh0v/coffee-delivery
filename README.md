@@ -46,7 +46,3 @@ pnpm dev
 ```
 
 A aplicação estará disponível em `http://localhost:3000`.
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
